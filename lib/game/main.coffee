@@ -16,4 +16,20 @@ ig.module(
       @parent()
       @loadLevel ig.global.LevelShip
 
+    inputStart: ->
+      @parent()
+      ig.input.bind ig.KEY.P, 'pause'
+
+    inputEnd: ->
+      @parent()
+      ig.input.unbind ig.KEY.P, 'pause'
+
+    respondInput: ->
+      @parent()
+      if ig.input.pressed 'pause'
+        if @paused
+          @unpause()
+        else
+          @pause()
+
   ig.main '#canvas', game, 60, _c.GAME_WIDTH, _c.GAME_HEIGHT, _c.SCALE, ig.LoaderExtended
