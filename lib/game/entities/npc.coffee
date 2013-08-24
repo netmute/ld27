@@ -24,3 +24,7 @@ ig.module(
     animSettings: idleX:
       frameTime: 1
       sequence: [0]
+
+    ready: ->
+      @parent()
+      @moveToLeft()

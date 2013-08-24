@@ -3,7 +3,7 @@ ig.module(
 )
 .requires(
   'plusplus.core.plusplus'
-  'game.levels.test'
+  'game.levels.ship'
   # 'plusplus.debug.debug'
 )
 .defines ->
@@ -14,7 +14,6 @@ ig.module(
 
     init: ->
       @parent()
-
-      @loadLevel ig.global.LevelTest
+      @loadLevel ig.global.LevelShip
 
   ig.main '#canvas', game, 60, _c.GAME_WIDTH, _c.GAME_HEIGHT, _c.SCALE, ig.LoaderExtended

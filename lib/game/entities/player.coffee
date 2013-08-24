@@ -19,6 +19,8 @@ ig.module(
 
     animSheet: new ig.AnimationSheet _c.PATH_TO_MEDIA + 'player.png', 9, 34
 
+    canJump: no
+
     animSettings:
       idleX:
         frameTime: 1
