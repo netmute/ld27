@@ -1,0 +1,12 @@
+.DS_Store
+Gemfile
+Gemfile.lock
+app.rb
+config.ru
+lib/impact/*
+lib/weltmeister/*
+tmp/*
+vendor/*
+weltmeister.html
+tools/bake.php
+tools/jsmin.php
