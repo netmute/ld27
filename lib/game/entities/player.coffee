@@ -28,3 +28,7 @@ ig.module(
       moveX:
         frameTime: .1
         sequence: [1,2,3,4,5,6]
+
+    initProperties: ->
+      @parent()
+      ig.global.player = this
