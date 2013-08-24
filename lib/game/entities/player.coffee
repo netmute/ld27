@@ -19,6 +19,10 @@ ig.module(
 
     animSheet: new ig.AnimationSheet _c.PATH_TO_MEDIA + 'player.png', 9, 34
 
-    animSettings: idleX:
-      frameTime: 1
-      sequence: [0]
+    animSettings:
+      idleX:
+        frameTime: 1
+        sequence: [0]
+      moveX:
+        frameTime: .1
+        sequence: [1,2,3,4,5,6]
