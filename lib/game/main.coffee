@@ -4,7 +4,7 @@ ig.module(
 .requires(
   'plusplus.core.plusplus'
   'game.levels.ship'
-  # 'plusplus.debug.debug'
+  'plusplus.debug.debug'
 )
 .defines ->
 
