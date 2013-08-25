@@ -4,8 +4,8 @@ ig.module(
 .requires(
   'plusplus.core.plusplus'
   'game.levels.ship'
-  # 'game.entities.star'
-  'plusplus.debug.debug'
+  'game.entities.star'
+  # 'plusplus.debug.debug'
 )
 .defines ->
 
@@ -33,12 +33,11 @@ ig.module(
         else
           @pause()
 
-    # update: ->
-    #   @parent()
-    #   @particleTimer = @particleTimer || new ig.Timer .5
-    #   if @particleTimer.delta() > 0
-    #     @spawnEntity ig.global.EntityStar, ig.system.width, Math.random() * ig.system.height
-    #     # @addItem star, layerName: 'backgroundMaps'
-    #     @particleTimer.reset()
+    update: ->
+      @parent()
+      @particleTimer = @particleTimer || new ig.Timer .5
+      if @particleTimer.delta() > 0
+        @spawnEntity ig.global.EntityStar, ig.system.width, Math.random() * ig.system.height
+        @particleTimer.reset()
 
   ig.main '#canvas', game, 60, _c.GAME_WIDTH, _c.GAME_HEIGHT, _c.SCALE, ig.LoaderExtended

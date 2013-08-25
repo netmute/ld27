@@ -19,12 +19,25 @@ ig.module(
 
     collides: ig.EntityExtended.COLLIDES.NEVER
 
+    lifeDuration: 4
     gravityFactor: 0
+    friction: 0
     animTileOffset: 28
-    lifeDuration: 5
     randomDoubleVel: no
     randomVel: no
 
     initProperties: ->
       @parent()
-      @vel = x: -100, y: 0
+      @vel = x: -200, y: 0
+
+    updateDynamics: ->
+      @vel.y += ig.game.gravity * ig.system.tick * @gravityFactor
+      @updateVelocity()
+      vx = @vel.x * ig.system.tick
+      vy = @vel.y * ig.system.tick
+
+      @handleMovementTrace {
+        collision: x: false, y: false, slope: false
+        pos: x: @pos.x + vx, y: @pos.y + vy
+        tile: x: 0, y: 0
+      }

@@ -19,7 +19,7 @@ ig.module(
       x: 9
       y: 34
 
-    animSheet: new ig.AnimationSheet _c.PATH_TO_MEDIA + 'player.png', 9, 34
+    animSheet: new ig.AnimationSheet _c.PATH_TO_MEDIA + 'captain.png', 9, 34
 
     animSettings: idleX:
       frameTime: 1

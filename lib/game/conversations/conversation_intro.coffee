@@ -27,6 +27,7 @@ ig.module(
 
     deactivate: ->
       captain = ig.game.getEntityByName('captain')
-      captain.moveTo x: 230, y: 81
+      captain.moveTo x: 240, y: 81
       captain.moveToRight()
+      ig.game.getEntityByName("bridgeDoor").locked = no
       @parent()
