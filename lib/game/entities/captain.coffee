@@ -1,5 +1,5 @@
 ig.module(
-  'game.entities.npc'
+  'game.entities.captain'
 )
 .requires(
   'plusplus.abstractities.character'
@@ -11,9 +11,9 @@ ig.module(
   _c = ig.CONFIG
   _ut = ig.utils
 
-  ig.EntityNpc = ig.global.EntityNpc = ig.Character.extend
+  ig.EntityCaptain = ig.global.EntityCaptain = ig.Character.extend
 
-    name: "bob"
+    name: "captain"
 
     size:
       x: 9

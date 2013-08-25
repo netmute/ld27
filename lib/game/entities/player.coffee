@@ -28,6 +28,9 @@ ig.module(
       moveX:
         frameTime: .1
         sequence: [1,2,3,4,5,6]
+      climbX:
+        frameTime: .3
+        sequence: [7,8]
 
     initProperties: ->
       @parent()
